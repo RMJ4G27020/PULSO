@@ -19,9 +19,10 @@ const CIAN := Color(0.21, 0.85, 1.0)
 
 ## El progreso con el que se saca la pantalla NIVELES: se pone EN MEMORIA y nunca
 ## se guarda (Guardado.cargar() lo devuelve). Es un estado al que se llega jugando:
-## los cuatro niveles pasados, los 12 fragmentos y tiempos cerca del par.
-const PROGRESO := {"max_nivel": 5, "tiempos": {"1": 34.2, "2": 49.7, "3": 61.5, "4": 55.3},
-	"fragmentos": {"1": 3, "2": 3, "3": 3, "4": 3}, "opciones": {}}
+## los seis niveles pasados, casi todos los fragmentos y tiempos cerca del par.
+const PROGRESO := {"max_nivel": 7, "tiempos": {"1": 34.2, "2": 49.7, "3": 61.5, "4": 55.3,
+	"5": 104.8, "6": 71.6}, "fragmentos": {"1": 3, "2": 3, "3": 3, "4": 3, "5": 2, "6": 3},
+	"opciones": {}}
 
 var _t0 := 0.0
 var _solo := ""

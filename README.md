@@ -10,6 +10,75 @@ Proyecto integrador de diseño para videojuegos (Tecmilenio) · Jose Guadalupe R
 |---|---|---|
 | ![Nivel 1](ficha_tienda/captura_1_nivel.png) | ![Lasermania](ficha_tienda/captura_3_lasermania.png) | ![Niveles](ficha_tienda/captura_5_niveles.png) |
 
+## Actividad 3: dónde se ve cada requisito
+
+| Requisito | Dónde se ve |
+|---|---|
+| Implementación de sus mecánicas | [Mecánicas](#mecánicas) |
+| Contar con una cinemática | [Vídeos de las cinemáticas](#cinemáticas) (intro y final) |
+| Tener un inicio y un final | [Inicio y final](#inicio-y-final) |
+| Arte propio en al menos el 50 % | [Arte propio](#arte-propio): **todo** el arte es propio, modelado y renderizado en Blender |
+| Entregarse en un ejecutable | [Descargar e instalar](#descargar-e-instalar) (Windows y Mac) |
+
+### Mecánicas
+
+Correr, saltar (altura variable), impulso, adherencia y salto de pared, la **estela** que mata si te paras,
+el **pulso** que la borra, la **carga** como vida y reloj, terminal > puerta > portal, fragmentos,
+**balizas** (punto de control y recarga), láseres, drones que persiguen y cuatro personajes con
+habilidades distintas.
+
+![Mecánicas](media/mecanicas.png)
+
+### Cinemáticas
+
+Las dos cinemáticas del juego, grabadas del propio juego con su música.
+
+| Intro | Final |
+|---|---|
+| [![Cinemática de la intro](media/video_intro.png)](media/cinematica_intro.mp4) | [![Cinemática final](media/video_final.png)](media/cinematica_final.mp4) |
+| [Ver / descargar el vídeo (1:08)](media/cinematica_intro.mp4) | [Ver / descargar el vídeo (0:37)](media/cinematica_final.mp4) |
+
+Los vídeos también están en las descargas del [Release](../../releases/latest).
+
+### Inicio y final
+
+El juego empieza en el menú y la intro, y la historia acaba en la cinemática final (después del nivel 3),
+con los niveles 4 a 6 como epílogo; al pasar el 6 se vuelve al menú.
+
+![Inicio](media/inicio.png)
+
+![Final](media/final.png)
+
+### Arte propio
+
+Todo el arte del juego es propio: los personajes, los enemigos, los elementos, los niveles y el fondo se
+**modelaron con scripts de Python en Blender** (`tsl04/build_*.py`) y se renderizaron a sprites desde ahí.
+Las láminas de las cinemáticas, la música y los sonidos también se hicieron con scripts propios.
+
+**Desde Blender** (cada modelo con sus materiales y su malla 3D):
+
+![Personaje en Blender](media/blender_personaje.png)
+
+![Enemigos en Blender](media/blender_enemigos.png)
+
+![Elementos en Blender](media/blender_elementos.png)
+
+![Niveles y fondo en Blender](media/blender_niveles.png)
+
+**En el juego** (los sprites que salen de esos renders):
+
+![Personajes](media/arte_personajes.png)
+
+![Animaciones de TSL-04](media/arte_animaciones.png)
+
+![Enemigos y peligros](media/arte_enemigos.png)
+
+![Elementos del nivel](media/arte_elementos.png)
+
+**Los seis niveles**, enteros:
+
+![Niveles](media/niveles.png)
+
 ## Descargar e instalar
 
 Las descargas están en **[Releases](../../releases/latest)**. No hace falta instalar nada más.
@@ -68,6 +137,7 @@ Para exportar, instala las plantillas de exportación (*Editor > Gestionar plant
 pulso-godot/   el juego (escenas, scripts, arte importado, pruebas en prueba/)
 tsl04/         scripts del pipeline de arte, música y niveles (Blender + Python)
 ficha_tienda/  capturas e iconos de la ficha de tienda
+media/         vídeos de las cinemáticas e imágenes de este README
 ```
 
 La documentación técnica está en [`pulso-godot/LEEME.md`](pulso-godot/LEEME.md) y el documento de diseño en [`pulso-godot/PULSO_GUIA_DEL_JUEGO.md`](pulso-godot/PULSO_GUIA_DEL_JUEGO.md).
