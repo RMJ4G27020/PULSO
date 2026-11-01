@@ -31,14 +31,15 @@ habilidades distintas.
 
 ### Cinemáticas
 
-Las dos cinemáticas del juego, grabadas del propio juego con su música.
+Las dos cinemáticas del juego, grabadas del propio juego con su música. Aquí abajo se ve un fragmento
+animado de cada una; los vídeos completos están en los enlaces.
 
 | Intro | Final |
 |---|---|
-| [![Cinemática de la intro](media/video_intro.png)](media/cinematica_intro.mp4) | [![Cinemática final](media/video_final.png)](media/cinematica_final.mp4) |
-| [Ver / descargar el vídeo (1:08)](media/cinematica_intro.mp4) | [Ver / descargar el vídeo (0:37)](media/cinematica_final.mp4) |
+| ![Fragmento de la intro](media/intro.gif) | ![Fragmento del final](media/final.gif) |
+| **[Vídeo completo de la intro (1:08, MP4)](https://github.com/RMJ4G27020/PULSO/releases/download/v0.3-actividad3/cinematica_intro.mp4)** | **[Vídeo completo del final (0:37, MP4)](https://github.com/RMJ4G27020/PULSO/releases/download/v0.3-actividad3/cinematica_final.mp4)** |
 
-Los vídeos también están en las descargas del [Release](../../releases/latest).
+Los vídeos también están en la carpeta [`media/`](media/) y en el [Release](../../releases/latest).
 
 ### Inicio y final
 
