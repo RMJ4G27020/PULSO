@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/jugador.gd" id="1_jug"]
+[ext_resource type="SpriteFrames" path="res://arte/tsl04/tsl04_spriteframes.tres" id="2_sf"]
+[ext_resource type="Script" path="res://scripts/sombra.gd" id="3_sombra"]
+
+[sub_resource type="CircleShape2D" id="c1"]
+radius = 14.0
+
+[node name="Jugador" type="CharacterBody2D" groups=["jugador"]]
+script = ExtResource("1_jug")
+
+[node name="Col" type="CollisionShape2D" parent="."]
+shape = SubResource("c1")
+
+[node name="Sombra" type="Node2D" parent="."]
+script = ExtResource("3_sombra")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_sf")
+scale = Vector2(0.333333, 0.333333)
+animation = &"reposo"
+autoplay = "reposo"
+
+[node name="Camara" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0

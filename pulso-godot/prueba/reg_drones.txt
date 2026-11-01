@@ -1,0 +1,24 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M1
+
+    t=1  x=795.8  a=736.0 b=856.0  vx=46.0  alerta=false
+    t=2  x=842.5  a=736.0 b=856.0  vx=46.0  alerta=false
+    t=3  x=854.1  a=736.0 b=856.0  vx=-40.2  alerta=false
+    t=4  x=808.2  a=736.0 b=856.0  vx=-46.0  alerta=false
+    t=5  x=762.2  a=736.0 b=856.0  vx=-46.0  alerta=false
+    t=6  x=731.3  a=736.0 b=856.0  vx=10.8  alerta=false
+    t=7  x=772.0  a=736.0 b=856.0  vx=46.0  alerta=false
+  se pasa 5.7 px del extremo de la patrulla            OK
+  se ladea hacia donde acelera (100% de 103 muestras)  OK
+  cabecea al sostenerse (-2.5 px)                      OK
+    objetivo 0.405 rad   error por muestra: 1.11 1.01 0.88 0.72 0.57 0.42 0.28 0.17 0.07 0.00 -0.04 -0.07 -0.08 -0.08 
+    vel_ang final -0.236   estado dispara   apuntado=0.50
+  la torreta llega a apuntar (30 muestras)             OK
+  se pasa de largo y corrige (2 cruces por el objetivo) OK
+  acaba asentada en el objetivo (error final 0.112 rad) OK
+FALLOS: 0
+PRUEBA DRONES OK
+WARNING: 2 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 1 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)

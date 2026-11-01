@@ -1,0 +1,19 @@
+# Godot: cache e importaciones (se regeneran al abrir el proyecto)
+pulso-godot/.godot/
+*.translation
+
+# Ejecutables y entregas: van como descargas en Releases, no en el repositorio
+exportar/
+entrega/
+
+# Pipeline de arte: solo los scripts. Los renders, los .blend y los cuadros se
+# regeneran con ellos y pesan mas de 100 MB.
+tsl04/*
+!tsl04/*.py
+__pycache__/
+*.blend1
+
+.DS_Store
+
+# Otro proyecto que vive en la misma carpeta (no es PULSO)
+logic-basics--godot-&-visual-scripting/

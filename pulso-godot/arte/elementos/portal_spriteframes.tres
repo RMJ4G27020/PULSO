@@ -1,0 +1,95 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dqqvd85m3lhbu"]
+
+[ext_resource type="Texture2D" uid="uid://cdweam0onoes3" path="res://arte/elementos/portal_portal.png" id="1_portal"]
+
+[sub_resource type="AtlasTexture" id="portal_00"]
+atlas = ExtResource("1_portal")
+region = Rect2(0, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="portal_01"]
+atlas = ExtResource("1_portal")
+region = Rect2(240, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="portal_02"]
+atlas = ExtResource("1_portal")
+region = Rect2(480, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="portal_03"]
+atlas = ExtResource("1_portal")
+region = Rect2(720, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="portal_04"]
+atlas = ExtResource("1_portal")
+region = Rect2(960, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="portal_05"]
+atlas = ExtResource("1_portal")
+region = Rect2(1200, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="portal_06"]
+atlas = ExtResource("1_portal")
+region = Rect2(0, 240, 240, 240)
+
+[sub_resource type="AtlasTexture" id="portal_07"]
+atlas = ExtResource("1_portal")
+region = Rect2(240, 240, 240, 240)
+
+[sub_resource type="AtlasTexture" id="portal_08"]
+atlas = ExtResource("1_portal")
+region = Rect2(480, 240, 240, 240)
+
+[sub_resource type="AtlasTexture" id="portal_09"]
+atlas = ExtResource("1_portal")
+region = Rect2(720, 240, 240, 240)
+
+[sub_resource type="AtlasTexture" id="portal_10"]
+atlas = ExtResource("1_portal")
+region = Rect2(960, 240, 240, 240)
+
+[sub_resource type="AtlasTexture" id="portal_11"]
+atlas = ExtResource("1_portal")
+region = Rect2(1200, 240, 240, 240)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("portal_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("portal_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("portal_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("portal_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("portal_04")
+}, {
+"duration": 1.0,
+"texture": SubResource("portal_05")
+}, {
+"duration": 1.0,
+"texture": SubResource("portal_06")
+}, {
+"duration": 1.0,
+"texture": SubResource("portal_07")
+}, {
+"duration": 1.0,
+"texture": SubResource("portal_08")
+}, {
+"duration": 1.0,
+"texture": SubResource("portal_09")
+}, {
+"duration": 1.0,
+"texture": SubResource("portal_10")
+}, {
+"duration": 1.0,
+"texture": SubResource("portal_11")
+}],
+"loop": 1,
+"name": &"portal",
+"speed": 12.0
+}]

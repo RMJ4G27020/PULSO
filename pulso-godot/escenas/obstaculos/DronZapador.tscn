@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c356jfmm048aj"]
+
+[ext_resource type="Script" uid="uid://c6gtt7wj4mkj1" path="res://scripts/dron_zapador.gd" id="1_s"]
+[ext_resource type="SpriteFrames" uid="uid://ttbwnoqls2fg" path="res://arte/elementos/dron_zapador_spriteframes.tres" id="2_f"]
+
+[sub_resource type="RectangleShape2D" id="c1"]
+size = Vector2(8, 80)
+
+[node name="DronZapador" type="Area2D" unique_id=1144774123]
+script = ExtResource("1_s")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1210969641]
+position = Vector2(0.0020012443, 0.0020012443)
+scale = Vector2(0.33331668, 0.33331668)
+sprite_frames = ExtResource("2_f")
+animation = &"reposo"
+
+[node name="ColHaz" type="CollisionShape2D" parent="." unique_id=1624509645]
+position = Vector2(0, 40)
+shape = SubResource("c1")
+
+[node name="Haz" type="Polygon2D" parent="." unique_id=612893902]

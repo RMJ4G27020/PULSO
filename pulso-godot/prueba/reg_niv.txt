@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M1
+
+n1_ida_y_vuelta    bloques3D=9   peligros=0  estados=0  salida=true anclaje=true
+n2_el_corredor     bloques3D=10  peligros=5  estados=8  salida=true anclaje=true
+n3_el_nudo         bloques3D=13  peligros=6  estados=9  salida=true anclaje=true
+PRUEBA NIVELES OK

@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+  n1_ida_y_vuelta    sin peligros  vuelta  avanzo  1162 px, subio a y=  -5   vivo al acabar
+  n1_ida_y_vuelta    con peligros  vuelta  avanzo  1162 px, subio a y=  -5   vivo al acabar
+  n2_el_corredor     sin peligros  vuelta  avanzo  1162 px, subio a y= 158   murio en x=103
+  n2_el_corredor     con peligros  ida    avanzo   260 px, subio a y= 475   murio en x=516
+  n3_el_nudo         sin peligros  ida    avanzo  1129 px, subio a y= 252   murio en x=882
+  n3_el_nudo         con peligros  ida    avanzo   260 px, subio a y= 635   murio en x=516
+  n1_ida_y_vuelta    sin peligros  vuelta  avanzo  1328 px, subio a y=  -5   vivo al acabar
+  n2_el_corredor     sin peligros  vuelta  avanzo  1328 px, subio a y= 158   murio en x=103
+  n3_el_nudo         sin peligros  ida    avanzo  1056 px, subio a y= 126   vivo al acabar
+PRUEBA BOT OK

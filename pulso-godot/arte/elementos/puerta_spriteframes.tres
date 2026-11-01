@@ -1,0 +1,135 @@
+[gd_resource type="SpriteFrames" load_steps=20 format=3]
+
+[ext_resource type="Texture2D" path="res://arte/elementos/puerta_cerrada.png" id="1_cerrada"]
+[ext_resource type="Texture2D" path="res://arte/elementos/puerta_abriendo.png" id="2_abriendo"]
+[ext_resource type="Texture2D" path="res://arte/elementos/puerta_abierta.png" id="3_abierta"]
+
+[sub_resource type="AtlasTexture" id="cerrada_00"]
+atlas = ExtResource("1_cerrada")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="cerrada_01"]
+atlas = ExtResource("1_cerrada")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="cerrada_02"]
+atlas = ExtResource("1_cerrada")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="cerrada_03"]
+atlas = ExtResource("1_cerrada")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abriendo_00"]
+atlas = ExtResource("2_abriendo")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abriendo_01"]
+atlas = ExtResource("2_abriendo")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abriendo_02"]
+atlas = ExtResource("2_abriendo")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abriendo_03"]
+atlas = ExtResource("2_abriendo")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abriendo_04"]
+atlas = ExtResource("2_abriendo")
+region = Rect2(1152, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abriendo_05"]
+atlas = ExtResource("2_abriendo")
+region = Rect2(1440, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abriendo_06"]
+atlas = ExtResource("2_abriendo")
+region = Rect2(0, 288, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abriendo_07"]
+atlas = ExtResource("2_abriendo")
+region = Rect2(288, 288, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abierta_00"]
+atlas = ExtResource("3_abierta")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abierta_01"]
+atlas = ExtResource("3_abierta")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abierta_02"]
+atlas = ExtResource("3_abierta")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="abierta_03"]
+atlas = ExtResource("3_abierta")
+region = Rect2(864, 0, 288, 288)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("cerrada_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("cerrada_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("cerrada_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("cerrada_03")
+}],
+"loop": true,
+"name": &"cerrada",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("abriendo_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("abriendo_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("abriendo_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("abriendo_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("abriendo_04")
+}, {
+"duration": 1.0,
+"texture": SubResource("abriendo_05")
+}, {
+"duration": 1.0,
+"texture": SubResource("abriendo_06")
+}, {
+"duration": 1.0,
+"texture": SubResource("abriendo_07")
+}],
+"loop": false,
+"name": &"abriendo",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("abierta_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("abierta_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("abierta_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("abierta_03")
+}],
+"loop": true,
+"name": &"abierta",
+"speed": 6.0
+}]

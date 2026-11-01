@@ -1,0 +1,156 @@
+[gd_resource type="SpriteFrames" load_steps=23 format=3]
+
+[ext_resource type="Texture2D" path="res://arte/elementos/dron_purga_patrulla.png" id="1_patrulla"]
+[ext_resource type="Texture2D" path="res://arte/elementos/dron_purga_alerta.png" id="2_alerta"]
+[ext_resource type="Texture2D" path="res://arte/elementos/dron_purga_impacto.png" id="3_impacto"]
+
+[sub_resource type="AtlasTexture" id="patrulla_00"]
+atlas = ExtResource("1_patrulla")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="patrulla_01"]
+atlas = ExtResource("1_patrulla")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="patrulla_02"]
+atlas = ExtResource("1_patrulla")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="patrulla_03"]
+atlas = ExtResource("1_patrulla")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="patrulla_04"]
+atlas = ExtResource("1_patrulla")
+region = Rect2(1152, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="patrulla_05"]
+atlas = ExtResource("1_patrulla")
+region = Rect2(1440, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="patrulla_06"]
+atlas = ExtResource("1_patrulla")
+region = Rect2(0, 288, 288, 288)
+
+[sub_resource type="AtlasTexture" id="patrulla_07"]
+atlas = ExtResource("1_patrulla")
+region = Rect2(288, 288, 288, 288)
+
+[sub_resource type="AtlasTexture" id="alerta_00"]
+atlas = ExtResource("2_alerta")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="alerta_01"]
+atlas = ExtResource("2_alerta")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="alerta_02"]
+atlas = ExtResource("2_alerta")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="alerta_03"]
+atlas = ExtResource("2_alerta")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="alerta_04"]
+atlas = ExtResource("2_alerta")
+region = Rect2(1152, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="alerta_05"]
+atlas = ExtResource("2_alerta")
+region = Rect2(1440, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="impacto_00"]
+atlas = ExtResource("3_impacto")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="impacto_01"]
+atlas = ExtResource("3_impacto")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="impacto_02"]
+atlas = ExtResource("3_impacto")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="impacto_03"]
+atlas = ExtResource("3_impacto")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="impacto_04"]
+atlas = ExtResource("3_impacto")
+region = Rect2(1152, 0, 288, 288)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("patrulla_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("patrulla_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("patrulla_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("patrulla_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("patrulla_04")
+}, {
+"duration": 1.0,
+"texture": SubResource("patrulla_05")
+}, {
+"duration": 1.0,
+"texture": SubResource("patrulla_06")
+}, {
+"duration": 1.0,
+"texture": SubResource("patrulla_07")
+}],
+"loop": true,
+"name": &"patrulla",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("alerta_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("alerta_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("alerta_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("alerta_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("alerta_04")
+}, {
+"duration": 1.0,
+"texture": SubResource("alerta_05")
+}],
+"loop": true,
+"name": &"alerta",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("impacto_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("impacto_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("impacto_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("impacto_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("impacto_04")
+}],
+"loop": false,
+"name": &"impacto",
+"speed": 16.0
+}]

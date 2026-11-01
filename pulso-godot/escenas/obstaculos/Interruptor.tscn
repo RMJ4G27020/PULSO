@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/interruptor.gd" id="1_s"]
+[ext_resource type="SpriteFrames" path="res://arte/elementos/interruptor_spriteframes.tres" id="2_f"]
+
+[sub_resource type="RectangleShape2D" id="c1"]
+size = Vector2(64, 52)
+
+[node name="Interruptor" type="Area2D"]
+script = ExtResource("1_s")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_f")
+scale = Vector2(0.3333, 0.3333)
+
+[node name="Col" type="CollisionShape2D" parent="."]
+shape = SubResource("c1")
+
+[node name="Aviso" type="Label" parent="."]
+offset_left = -24.0
+offset_top = -46.0
+offset_right = 24.0
+offset_bottom = -30.0
+theme_override_colors/font_color = Color(0.78, 0.95, 0.31, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.03, 0.05, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 13
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible = false

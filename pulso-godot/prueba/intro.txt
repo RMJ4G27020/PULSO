@@ -1,0 +1,8 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+DURACION teorica 66.8 s | reproducida 67.4 s
+BEATS vistos: 18 de 17
+FASES: ["laminas", "fundido", "rotulo"]
+CAMBIOS de dibujo: 634  ->  9.4 por segundo
+ESPERADO ~668 cambios (10 por segundo)
+PRUEBA INTRO OK

@@ -1,0 +1,14 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M1
+
+CAP menu_jugar 1280x720
+CAP menu_salir 1280x720
+CAP menu_opciones 1280x720
+CAP cine_1_maquina 1280x720
+CAP cine_3_exterior 1280x720
+CAP cine_5_despierta 1280x720
+CAP cine_6_error 1280x720
+CAP cine_7_purga 1280x720
+CAP cine_8_huida 1280x720
+CAP cine_9_rotulo 1280x720
+CAPTURAS EN: /Users/joserico/Library/Application Support/Godot/app_userdata/PULSO/cap

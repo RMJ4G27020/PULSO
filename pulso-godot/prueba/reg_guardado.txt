@@ -1,0 +1,22 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M1
+
+  el nivel 1 empieza desbloqueado                          OK
+  el nivel 2 empieza bloqueado                             OK
+  completar el 1 desbloquea el 2                           OK
+  guarda el tiempo (42.5)                                  OK
+  guarda los fragmentos (2)                                OK
+  un tiempo PEOR no pisa al mejor                          OK
+  menos fragmentos no pisan a los que ya tenias            OK
+  un tiempo MEJOR si lo pisa (30.0)                        OK
+  cuenta las muertes (2)                                   OK
+  sobrevive a cerrar y abrir                               OK
+  el desbloqueo tambien sobrevive                          OK
+WARNING: progreso ilegible, se empieza de cero
+     at: push_warning (core/variant/variant_utility.cpp:1033)
+     GDScript backtrace (most recent call first):
+         [0] cargar (res://scripts/guardado.gd:71)
+         [1] _ready (res://prueba/prueba_guardado.gd:39)
+  un archivo corrupto no revienta: empieza de cero         OK
+FALLOS: 0
+PRUEBA GUARDADO OK

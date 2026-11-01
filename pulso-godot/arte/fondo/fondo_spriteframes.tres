@@ -1,0 +1,123 @@
+[gd_resource type="SpriteFrames" load_steps=18 format=3]
+
+[ext_resource type="Texture2D" path="res://arte/fondo/fondo_placa.png" id="1_f"]
+
+[sub_resource type="AtlasTexture" id="f00"]
+atlas = ExtResource("1_f")
+region = Rect2(0, 0, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f01"]
+atlas = ExtResource("1_f")
+region = Rect2(640, 0, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f02"]
+atlas = ExtResource("1_f")
+region = Rect2(1280, 0, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f03"]
+atlas = ExtResource("1_f")
+region = Rect2(1920, 0, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f04"]
+atlas = ExtResource("1_f")
+region = Rect2(0, 358, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f05"]
+atlas = ExtResource("1_f")
+region = Rect2(640, 358, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f06"]
+atlas = ExtResource("1_f")
+region = Rect2(1280, 358, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f07"]
+atlas = ExtResource("1_f")
+region = Rect2(1920, 358, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f08"]
+atlas = ExtResource("1_f")
+region = Rect2(0, 716, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f09"]
+atlas = ExtResource("1_f")
+region = Rect2(640, 716, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f10"]
+atlas = ExtResource("1_f")
+region = Rect2(1280, 716, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f11"]
+atlas = ExtResource("1_f")
+region = Rect2(1920, 716, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f12"]
+atlas = ExtResource("1_f")
+region = Rect2(0, 1074, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f13"]
+atlas = ExtResource("1_f")
+region = Rect2(640, 1074, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f14"]
+atlas = ExtResource("1_f")
+region = Rect2(1280, 1074, 640, 358)
+
+[sub_resource type="AtlasTexture" id="f15"]
+atlas = ExtResource("1_f")
+region = Rect2(1920, 1074, 640, 358)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("f00")
+}, {
+"duration": 1.0,
+"texture": SubResource("f01")
+}, {
+"duration": 1.0,
+"texture": SubResource("f02")
+}, {
+"duration": 1.0,
+"texture": SubResource("f03")
+}, {
+"duration": 1.0,
+"texture": SubResource("f04")
+}, {
+"duration": 1.0,
+"texture": SubResource("f05")
+}, {
+"duration": 1.0,
+"texture": SubResource("f06")
+}, {
+"duration": 1.0,
+"texture": SubResource("f07")
+}, {
+"duration": 1.0,
+"texture": SubResource("f08")
+}, {
+"duration": 1.0,
+"texture": SubResource("f09")
+}, {
+"duration": 1.0,
+"texture": SubResource("f10")
+}, {
+"duration": 1.0,
+"texture": SubResource("f11")
+}, {
+"duration": 1.0,
+"texture": SubResource("f12")
+}, {
+"duration": 1.0,
+"texture": SubResource("f13")
+}, {
+"duration": 1.0,
+"texture": SubResource("f14")
+}, {
+"duration": 1.0,
+"texture": SubResource("f15")
+}],
+"loop": true,
+"name": &"placa",
+"speed": 8.0
+}]

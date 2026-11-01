@@ -1,0 +1,121 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://d2njlhfcyra0e"]
+
+[ext_resource type="Texture2D" uid="uid://cfb3uxoir1w46" path="res://arte/elementos/bloque_pulsante_apagado.png" id="1_apagado"]
+[ext_resource type="Texture2D" uid="uid://cajp1yg5bqqx6" path="res://arte/elementos/bloque_pulsante_aviso.png" id="2_aviso"]
+[ext_resource type="Texture2D" uid="uid://bfjbflsrfs350" path="res://arte/elementos/bloque_pulsante_encendido.png" id="3_encendido"]
+
+[sub_resource type="AtlasTexture" id="apagado_00"]
+atlas = ExtResource("1_apagado")
+region = Rect2(0, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="apagado_01"]
+atlas = ExtResource("1_apagado")
+region = Rect2(144, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="apagado_02"]
+atlas = ExtResource("1_apagado")
+region = Rect2(288, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="apagado_03"]
+atlas = ExtResource("1_apagado")
+region = Rect2(432, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="aviso_00"]
+atlas = ExtResource("2_aviso")
+region = Rect2(0, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="aviso_01"]
+atlas = ExtResource("2_aviso")
+region = Rect2(144, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="aviso_02"]
+atlas = ExtResource("2_aviso")
+region = Rect2(288, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="aviso_03"]
+atlas = ExtResource("2_aviso")
+region = Rect2(432, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="encendido_00"]
+atlas = ExtResource("3_encendido")
+region = Rect2(0, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="encendido_01"]
+atlas = ExtResource("3_encendido")
+region = Rect2(144, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="encendido_02"]
+atlas = ExtResource("3_encendido")
+region = Rect2(288, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="encendido_03"]
+atlas = ExtResource("3_encendido")
+region = Rect2(432, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="encendido_04"]
+atlas = ExtResource("3_encendido")
+region = Rect2(576, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="encendido_05"]
+atlas = ExtResource("3_encendido")
+region = Rect2(720, 0, 144, 144)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("apagado_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("apagado_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("apagado_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("apagado_03")
+}],
+"loop": 1,
+"name": &"apagado",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("aviso_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("aviso_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("aviso_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("aviso_03")
+}],
+"loop": 1,
+"name": &"aviso",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("encendido_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("encendido_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("encendido_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("encendido_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("encendido_04")
+}, {
+"duration": 1.0,
+"texture": SubResource("encendido_05")
+}],
+"loop": 1,
+"name": &"encendido",
+"speed": 12.0
+}]

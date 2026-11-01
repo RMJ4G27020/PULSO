@@ -1,0 +1,252 @@
+[gd_scene load_steps=22 format=3]
+
+[ext_resource type="Script" path="res://scripts/nivel.gd" id="1_nivel"]
+[ext_resource type="Script" path="res://scripts/rejilla_estela.gd" id="2_estela"]
+[ext_resource type="PackedScene" path="res://escenas/Jugador.tscn" id="3_jugador"]
+[ext_resource type="Texture2D" path="res://arte/elementos/bloque_bloque.png" id="4_bloque"]
+[ext_resource type="Texture2D" path="res://arte/elementos/pared_pared.png" id="15_pared"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Portal.tscn" id="5_portal"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Anclaje.tscn" id="6_anclaje"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/LaserEmisor.tscn" id="7_laser"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/DronPurga.tscn" id="8_dron"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/DronZapador.tscn" id="9_zap"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Pinchos.tscn" id="10_pinchos"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/BloquePulsante.tscn" id="11_pulsante"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Interruptor.tscn" id="12_inter"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Puerta.tscn" id="13_puerta"]
+[ext_resource type="SpriteFrames" path="res://arte/fondo/fondo_spriteframes.tres" id="14_fondo"]
+
+[sub_resource type="RectangleShape2D" id="s0"]
+size = Vector2(352, 48)
+
+[sub_resource type="RectangleShape2D" id="s1"]
+size = Vector2(192, 32)
+
+[sub_resource type="RectangleShape2D" id="s2"]
+size = Vector2(16, 352)
+
+[sub_resource type="RectangleShape2D" id="s3"]
+size = Vector2(48, 32)
+
+[sub_resource type="RectangleShape2D" id="s4"]
+size = Vector2(224, 32)
+
+[sub_resource type="CircleShape2D" id="sf"]
+radius = 10.0
+
+[node name="Nivel" type="Node2D"]
+script = ExtResource("1_nivel")
+titulo = "Nivel 4  ·  La chimenea"
+par = 58
+limite_caida = 848
+
+[node name="Fondo" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="Capa" type="Parallax2D" parent="Fondo"]
+follow_viewport = false
+scroll_scale = Vector2(0.25, 0.12)
+repeat_size = Vector2(640, 358)
+repeat_times = 4
+
+[node name="Placa" type="AnimatedSprite2D" parent="Fondo/Capa"]
+sprite_frames = ExtResource("14_fondo")
+animation = &"placa"
+autoplay = "placa"
+centered = false
+position = Vector2(0, -160)
+
+[node name="Geometria" type="StaticBody2D" parent="."]
+
+[node name="C00" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(176, 696)
+shape = SubResource("s0")
+
+[node name="V00" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(0, 672)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 1056, 144)
+
+[node name="C01" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(560, 624)
+shape = SubResource("s1")
+
+[node name="V01" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(464, 608)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 96)
+
+[node name="C02" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(520, 432)
+shape = SubResource("s2")
+
+[node name="V02" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("15_pared")
+centered = false
+position = Vector2(512, 256)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 48, 1056)
+
+[node name="C03" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(616, 432)
+shape = SubResource("s2")
+
+[node name="V03" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("15_pared")
+centered = false
+position = Vector2(608, 256)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 48, 1056)
+
+[node name="C04" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(504, 256)
+shape = SubResource("s3")
+
+[node name="V04" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(480, 240)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C05" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(704, 256)
+shape = SubResource("s1")
+
+[node name="V05" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(608, 240)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 96)
+
+[node name="C06" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(960, 192)
+shape = SubResource("s1")
+
+[node name="V06" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(864, 176)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 96)
+
+[node name="C07" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(704, 128)
+shape = SubResource("s1")
+
+[node name="V07" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(608, 112)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 96)
+
+[node name="C08" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(432, 128)
+shape = SubResource("s4")
+
+[node name="V08" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(320, 112)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 672, 96)
+
+[node name="C09" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(160, 176)
+shape = SubResource("s1")
+
+[node name="V09" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(64, 160)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 96)
+
+[node name="Estela" type="Node2D" parent="." groups=["estela"]]
+script = ExtResource("2_estela")
+
+[node name="Aparicion" type="Marker2D" parent="."]
+position = Vector2(288, 656)
+
+[node name="Anclaje" parent="." instance=ExtResource("6_anclaje")]
+position = Vector2(288, 670)
+
+[node name="Salida" parent="." instance=ExtResource("5_portal")]
+position = Vector2(32, 640)
+
+[node name="Interruptor" parent="." instance=ExtResource("12_inter")]
+position = Vector2(944, 160)
+
+[node name="Puerta" parent="." instance=ExtResource("13_puerta")]
+position = Vector2(80, 624)
+
+[node name="Fragmentos" type="Node2D" parent="."]
+
+[node name="F0" type="Area2D" parent="Fragmentos"]
+position = Vector2(544, 480)
+
+[node name="Col" type="CollisionShape2D" parent="Fragmentos/F0"]
+shape = SubResource("sf")
+
+[node name="Vis" type="Polygon2D" parent="Fragmentos/F0"]
+color = Color(0.78, 0.95, 0.31, 1)
+polygon = PackedVector2Array(0, -11, 9, 0, 0, 11, -9, 0)
+
+[node name="F1" type="Area2D" parent="Fragmentos"]
+position = Vector2(960, 160)
+
+[node name="Col" type="CollisionShape2D" parent="Fragmentos/F1"]
+shape = SubResource("sf")
+
+[node name="Vis" type="Polygon2D" parent="Fragmentos/F1"]
+color = Color(0.78, 0.95, 0.31, 1)
+polygon = PackedVector2Array(0, -11, 9, 0, 0, 11, -9, 0)
+
+[node name="F2" type="Area2D" parent="Fragmentos"]
+position = Vector2(160, 144)
+
+[node name="Col" type="CollisionShape2D" parent="Fragmentos/F2"]
+shape = SubResource("sf")
+
+[node name="Vis" type="Polygon2D" parent="Fragmentos/F2"]
+color = Color(0.78, 0.95, 0.31, 1)
+polygon = PackedVector2Array(0, -11, 9, 0, 0, 11, -9, 0)
+
+[node name="Peligros" type="Node2D" parent="."]
+
+[node name="Dron0" parent="Peligros" instance=ExtResource("8_dron")]
+position = Vector2(704, 208)
+recorrido = Vector2(96, 0)
+
+[node name="Laser1" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(400, 128)
+
+[node name="Jugador" parent="." instance=ExtResource("3_jugador")]
+
+[node name="HUD" type="CanvasLayer" parent="."]

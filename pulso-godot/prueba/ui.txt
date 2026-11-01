@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+MENU instanciado, opciones=4
+MENU ok: sel=3 panel='' reten=0.0
+CINE toma 3/9 (exterior)
+CINE toma 5/9 (despierta)
+CINE toma 6/9 (error)
+CINE toma 8/9 (huida)
+CINE completa: llego a la toma 10 de 9
+PRUEBA UI OK

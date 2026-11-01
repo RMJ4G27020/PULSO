@@ -1,0 +1,20 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M1
+
+WARNING: progreso ilegible, se empieza de cero
+     at: push_warning (core/variant/variant_utility.cpp:1033)
+     GDScript backtrace (most recent call first):
+         [0] cargar (res://scripts/guardado.gd:71)
+         [1] _ready (res://scripts/guardado.gd:12)
+  n1_ida_y_vuelta    sin peligros  vuelta  avanzo    96 px, subio a y= 166   vivo al acabar
+  n1_ida_y_vuelta    con peligros  ida    avanzo  1415 px, subio a y=  -5   vivo al acabar
+  n2_el_corredor     sin peligros  vuelta  avanzo  1415 px, subio a y=  97   murio en x=103
+  n2_el_corredor     con peligros  ida    avanzo   516 px, subio a y=  97   vivo al acabar
+  n3_el_nudo         sin peligros  ida    avanzo  1385 px, subio a y=  88   vivo al acabar
+  n3_el_nudo         con peligros  ida    avanzo   516 px, subio a y=  88   vivo al acabar
+  n1_ida_y_vuelta    sin peligros  vuelta  avanzo  1328 px, subio a y=  -5   vivo al acabar
+  n2_el_corredor     sin peligros  vuelta  avanzo  1328 px, subio a y= 158   murio en x=103
+  n3_el_nudo         sin peligros  ida    avanzo  1056 px, subio a y= 126   vivo al acabar
+  n4_la_chimenea     sin peligros  ida    avanzo   498 px, subio a y=  97   vivo al acabar
+  n4_la_chimenea     con peligros  ida    avanzo   498 px, subio a y=  97   vivo al acabar
+PRUEBA BOT OK

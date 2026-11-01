@@ -1,0 +1,307 @@
+[gd_scene load_steps=22 format=3]
+
+[ext_resource type="Script" path="res://scripts/nivel.gd" id="1_nivel"]
+[ext_resource type="Script" path="res://scripts/rejilla_estela.gd" id="2_estela"]
+[ext_resource type="PackedScene" path="res://escenas/Jugador.tscn" id="3_jugador"]
+[ext_resource type="Texture2D" path="res://arte/elementos/bloque_bloque.png" id="4_bloque"]
+[ext_resource type="Texture2D" path="res://arte/elementos/pared_pared.png" id="15_pared"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Portal.tscn" id="5_portal"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Anclaje.tscn" id="6_anclaje"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/LaserEmisor.tscn" id="7_laser"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/DronPurga.tscn" id="8_dron"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/DronZapador.tscn" id="9_zap"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Pinchos.tscn" id="10_pinchos"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/BloquePulsante.tscn" id="11_pulsante"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Interruptor.tscn" id="12_inter"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Puerta.tscn" id="13_puerta"]
+[ext_resource type="SpriteFrames" path="res://arte/fondo/fondo_spriteframes.tres" id="14_fondo"]
+
+[sub_resource type="RectangleShape2D" id="s0"]
+size = Vector2(320, 48)
+
+[sub_resource type="RectangleShape2D" id="s1"]
+size = Vector2(160, 32)
+
+[sub_resource type="RectangleShape2D" id="s2"]
+size = Vector2(192, 32)
+
+[sub_resource type="RectangleShape2D" id="s3"]
+size = Vector2(176, 32)
+
+[sub_resource type="RectangleShape2D" id="s4"]
+size = Vector2(48, 32)
+
+[sub_resource type="CircleShape2D" id="sf"]
+radius = 10.0
+
+[node name="Nivel" type="Node2D"]
+script = ExtResource("1_nivel")
+titulo = "Nivel 3  ·  El nudo"
+par = 66
+limite_caida = 944
+
+[node name="Fondo" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="Capa" type="Parallax2D" parent="Fondo"]
+follow_viewport = false
+scroll_scale = Vector2(0.25, 0.12)
+repeat_size = Vector2(640, 358)
+repeat_times = 4
+
+[node name="Placa" type="AnimatedSprite2D" parent="Fondo/Capa"]
+sprite_frames = ExtResource("14_fondo")
+animation = &"placa"
+autoplay = "placa"
+centered = false
+position = Vector2(0, -160)
+
+[node name="Geometria" type="StaticBody2D" parent="."]
+
+[node name="C00" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(160, 792)
+shape = SubResource("s0")
+
+[node name="V00" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(0, 768)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 960, 144)
+
+[node name="C01" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(512, 720)
+shape = SubResource("s1")
+
+[node name="V01" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(432, 704)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C02" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(784, 656)
+shape = SubResource("s1")
+
+[node name="V02" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(704, 640)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C03" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(1056, 592)
+shape = SubResource("s1")
+
+[node name="V03" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(976, 576)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C04" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(1328, 528)
+shape = SubResource("s1")
+
+[node name="V04" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(1248, 512)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C05" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(1056, 464)
+shape = SubResource("s1")
+
+[node name="V05" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(976, 448)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C06" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(784, 400)
+shape = SubResource("s1")
+
+[node name="V06" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(704, 384)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C07" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(1072, 336)
+shape = SubResource("s2")
+
+[node name="V07" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(976, 320)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 96)
+
+[node name="C08" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(784, 272)
+shape = SubResource("s1")
+
+[node name="V08" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(704, 256)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C09" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(512, 208)
+shape = SubResource("s1")
+
+[node name="V09" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(432, 192)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C10" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(232, 144)
+shape = SubResource("s3")
+
+[node name="V10" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(144, 128)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 528, 96)
+
+[node name="C11" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(648, 144)
+shape = SubResource("s4")
+
+[node name="V11" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(624, 128)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C12" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(920, 272)
+shape = SubResource("s4")
+
+[node name="V12" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(896, 256)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="Estela" type="Node2D" parent="." groups=["estela"]]
+script = ExtResource("2_estela")
+
+[node name="Aparicion" type="Marker2D" parent="."]
+position = Vector2(256, 752)
+
+[node name="Anclaje" parent="." instance=ExtResource("6_anclaje")]
+position = Vector2(256, 766)
+
+[node name="Salida" parent="." instance=ExtResource("5_portal")]
+position = Vector2(176, 96)
+
+[node name="Interruptor" parent="." instance=ExtResource("12_inter")]
+position = Vector2(1056, 304)
+
+[node name="Puerta" parent="." instance=ExtResource("13_puerta")]
+position = Vector2(240, 80)
+
+[node name="Fragmentos" type="Node2D" parent="."]
+
+[node name="F0" type="Area2D" parent="Fragmentos"]
+position = Vector2(576, 688)
+
+[node name="Col" type="CollisionShape2D" parent="Fragmentos/F0"]
+shape = SubResource("sf")
+
+[node name="Vis" type="Polygon2D" parent="Fragmentos/F0"]
+color = Color(0.78, 0.95, 0.31, 1)
+polygon = PackedVector2Array(0, -11, 9, 0, 0, 11, -9, 0)
+
+[node name="F1" type="Area2D" parent="Fragmentos"]
+position = Vector2(1328, 496)
+
+[node name="Col" type="CollisionShape2D" parent="Fragmentos/F1"]
+shape = SubResource("sf")
+
+[node name="Vis" type="Polygon2D" parent="Fragmentos/F1"]
+color = Color(0.78, 0.95, 0.31, 1)
+polygon = PackedVector2Array(0, -11, 9, 0, 0, 11, -9, 0)
+
+[node name="F2" type="Area2D" parent="Fragmentos"]
+position = Vector2(512, 176)
+
+[node name="Col" type="CollisionShape2D" parent="Fragmentos/F2"]
+shape = SubResource("sf")
+
+[node name="Vis" type="Polygon2D" parent="Fragmentos/F2"]
+color = Color(0.78, 0.95, 0.31, 1)
+polygon = PackedVector2Array(0, -11, 9, 0, 0, 11, -9, 0)
+
+[node name="Peligros" type="Node2D" parent="."]
+
+[node name="Pulsante0" parent="Peligros" instance=ExtResource("11_pulsante")]
+position = Vector2(496, 688)
+desfase = 0.0
+
+[node name="Dron1" parent="Peligros" instance=ExtResource("8_dron")]
+position = Vector2(736, 608)
+recorrido = Vector2(120, 0)
+
+[node name="Pinchos2" parent="Peligros" instance=ExtResource("10_pinchos")]
+position = Vector2(1056, 560)
+
+[node name="Pulsante3" parent="Peligros" instance=ExtResource("11_pulsante")]
+position = Vector2(784, 368)
+desfase = 0.5
+
+[node name="Zapador4" parent="Peligros" instance=ExtResource("9_zap")]
+position = Vector2(912, 288)
+
+[node name="Laser5" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(640, 160)
+largo_celdas = 4
+desfase = 0.2
+
+[node name="Jugador" parent="." instance=ExtResource("3_jugador")]
+
+[node name="HUD" type="CanvasLayer" parent="."]

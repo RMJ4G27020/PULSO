@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://prueba/prueba_bot.gd" id="1_b"]
+
+[node name="PruebaBot" type="Node"]
+script = ExtResource("1_b")

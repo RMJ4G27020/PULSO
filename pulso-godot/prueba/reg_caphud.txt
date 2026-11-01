@@ -1,0 +1,14 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M1
+
+ERROR: Parse JSON failed. Error at line 0: Unterminated string
+   at: parse_string (core/io/json.cpp:629)
+   GDScript backtrace (most recent call first):
+       [0] cargar (res://scripts/guardado.gd:66)
+       [1] _ready (res://scripts/guardado.gd:12)
+  a 640 de ancho el tiempo queda pegado a la derecha (borde 628 de 640) OK
+  y el estado no se sale (616 de 640)                      OK
+  a 780 de ancho el tiempo queda pegado a la derecha (borde 768 de 780) OK
+  y el estado no se sale (756 de 780)                      OK
+FALLOS: 0
+CAPTURAS HUD OK

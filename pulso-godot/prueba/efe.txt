@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M1
+
+destello pico   0.90
+sacudida pico   4.07 px
+aberracion pico 0.0300
+time_scale min  0.00  (congelacion)
+al final -> destello 0.00  aberracion 0.0063  time_scale 1.00
+chispas emitidas: 24
+PRUEBA EFECTOS OK

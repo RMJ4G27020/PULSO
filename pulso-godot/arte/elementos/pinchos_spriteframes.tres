@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3]
+
+[ext_resource type="Texture2D" path="res://arte/elementos/pinchos_pinchos.png" id="1_pinchos"]
+
+[sub_resource type="AtlasTexture" id="pinchos_00"]
+atlas = ExtResource("1_pinchos")
+region = Rect2(0, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="pinchos_01"]
+atlas = ExtResource("1_pinchos")
+region = Rect2(144, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="pinchos_02"]
+atlas = ExtResource("1_pinchos")
+region = Rect2(288, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="pinchos_03"]
+atlas = ExtResource("1_pinchos")
+region = Rect2(432, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="pinchos_04"]
+atlas = ExtResource("1_pinchos")
+region = Rect2(576, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="pinchos_05"]
+atlas = ExtResource("1_pinchos")
+region = Rect2(720, 0, 144, 144)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("pinchos_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("pinchos_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("pinchos_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("pinchos_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("pinchos_04")
+}, {
+"duration": 1.0,
+"texture": SubResource("pinchos_05")
+}],
+"loop": true,
+"name": &"pinchos",
+"speed": 8.0
+}]

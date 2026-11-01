@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/laser.gd" id="1_s"]
+[ext_resource type="SpriteFrames" path="res://arte/elementos/laser_emisor_spriteframes.tres" id="2_f"]
+
+[sub_resource type="RectangleShape2D" id="c1"]
+size = Vector2(7, 80)
+
+[node name="LaserEmisor" type="Area2D"]
+script = ExtResource("1_s")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_f")
+scale = Vector2(0.3333, 0.3333)
+
+[node name="ColHaz" type="CollisionShape2D" parent="."]
+shape = SubResource("c1")
+position = Vector2(0, 40)

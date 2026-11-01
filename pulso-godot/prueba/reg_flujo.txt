@@ -1,0 +1,17 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M1
+
+WARNING: progreso ilegible, se empieza de cero
+     at: push_warning (core/variant/variant_utility.cpp:1033)
+     GDScript backtrace (most recent call first):
+         [0] cargar (res://scripts/guardado.gd:71)
+         [1] _ready (res://scripts/guardado.gd:12)
+n1_ida_y_vuelta  puerta_cerrada_al_inicio=true  abre_al_tocar=true  carga=99  bloques=9  peligros=0
+n2_el_corredor   puerta_cerrada_al_inicio=true  abre_al_tocar=true  carga=98  bloques=10  peligros=5
+n3_el_nudo       puerta_cerrada_al_inicio=true  abre_al_tocar=true  carga=98  bloques=13  peligros=6
+ORDEN en nivel.gd: 4 entradas
+PRUEBA FLUJO OK
+WARNING: 6 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 3 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)

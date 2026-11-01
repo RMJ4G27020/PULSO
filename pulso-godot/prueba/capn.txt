@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M1
+
+CAP n1_ida_y_vuelta
+CAP n2_el_corredor
+CAP n3_el_nudo
+CAPTURAS LISTAS

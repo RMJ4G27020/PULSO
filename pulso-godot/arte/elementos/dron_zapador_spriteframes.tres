@@ -1,0 +1,128 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ttbwnoqls2fg"]
+
+[ext_resource type="Texture2D" uid="uid://chtw877cs6jhx" path="res://arte/elementos/dron_zapador_reposo.png" id="1_reposo"]
+[ext_resource type="Texture2D" uid="uid://cp8arvdpexu0s" path="res://arte/elementos/dron_zapador_apunta.png" id="2_apunta"]
+[ext_resource type="Texture2D" uid="uid://4cfgmm2goylw" path="res://arte/elementos/dron_zapador_dispara.png" id="3_dispara"]
+
+[sub_resource type="AtlasTexture" id="apunta_00"]
+atlas = ExtResource("2_apunta")
+region = Rect2(0, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="apunta_01"]
+atlas = ExtResource("2_apunta")
+region = Rect2(240, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="apunta_02"]
+atlas = ExtResource("2_apunta")
+region = Rect2(480, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="apunta_03"]
+atlas = ExtResource("2_apunta")
+region = Rect2(720, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="apunta_04"]
+atlas = ExtResource("2_apunta")
+region = Rect2(960, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="dispara_00"]
+atlas = ExtResource("3_dispara")
+region = Rect2(0, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="dispara_01"]
+atlas = ExtResource("3_dispara")
+region = Rect2(240, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="dispara_02"]
+atlas = ExtResource("3_dispara")
+region = Rect2(480, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="dispara_03"]
+atlas = ExtResource("3_dispara")
+region = Rect2(720, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="reposo_00"]
+atlas = ExtResource("1_reposo")
+region = Rect2(0, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="reposo_01"]
+atlas = ExtResource("1_reposo")
+region = Rect2(240, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="reposo_02"]
+atlas = ExtResource("1_reposo")
+region = Rect2(480, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="reposo_03"]
+atlas = ExtResource("1_reposo")
+region = Rect2(720, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="reposo_04"]
+atlas = ExtResource("1_reposo")
+region = Rect2(960, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="reposo_05"]
+atlas = ExtResource("1_reposo")
+region = Rect2(1200, 0, 240, 240)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("apunta_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("apunta_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("apunta_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("apunta_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("apunta_04")
+}],
+"loop": 0,
+"name": &"apunta",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("dispara_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("dispara_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("dispara_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("dispara_03")
+}],
+"loop": 0,
+"name": &"dispara",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("reposo_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("reposo_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("reposo_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("reposo_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("reposo_04")
+}, {
+"duration": 1.0,
+"texture": SubResource("reposo_05")
+}],
+"loop": 1,
+"name": &"reposo",
+"speed": 8.0
+}]

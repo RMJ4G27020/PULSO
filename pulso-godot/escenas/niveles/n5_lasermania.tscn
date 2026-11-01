@@ -1,0 +1,720 @@
+[gd_scene load_steps=25 format=3]
+
+[ext_resource type="Script" path="res://scripts/nivel.gd" id="1_nivel"]
+[ext_resource type="Script" path="res://scripts/rejilla_estela.gd" id="2_estela"]
+[ext_resource type="PackedScene" path="res://escenas/Jugador.tscn" id="3_jugador"]
+[ext_resource type="Texture2D" path="res://arte/elementos/bloque_bloque.png" id="4_bloque"]
+[ext_resource type="Texture2D" path="res://arte/elementos/pared_pared.png" id="15_pared"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Portal.tscn" id="5_portal"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Anclaje.tscn" id="6_anclaje"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/LaserEmisor.tscn" id="7_laser"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/DronPurga.tscn" id="8_dron"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/DronZapador.tscn" id="9_zap"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Pinchos.tscn" id="10_pinchos"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/BloquePulsante.tscn" id="11_pulsante"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Interruptor.tscn" id="12_inter"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Puerta.tscn" id="13_puerta"]
+[ext_resource type="SpriteFrames" path="res://arte/fondo/fondo_spriteframes.tres" id="14_fondo"]
+[ext_resource type="PackedScene" path="res://escenas/obstaculos/Baliza.tscn" id="16_baliza"]
+
+[sub_resource type="RectangleShape2D" id="s0"]
+size = Vector2(1600, 48)
+
+[sub_resource type="RectangleShape2D" id="s1"]
+size = Vector2(48, 32)
+
+[sub_resource type="RectangleShape2D" id="s2"]
+size = Vector2(224, 32)
+
+[sub_resource type="RectangleShape2D" id="s3"]
+size = Vector2(160, 32)
+
+[sub_resource type="RectangleShape2D" id="s4"]
+size = Vector2(1184, 32)
+
+[sub_resource type="RectangleShape2D" id="s5"]
+size = Vector2(1248, 48)
+
+[sub_resource type="RectangleShape2D" id="s6"]
+size = Vector2(192, 32)
+
+[sub_resource type="CircleShape2D" id="sf"]
+radius = 10.0
+
+[node name="Nivel" type="Node2D"]
+script = ExtResource("1_nivel")
+titulo = "Nivel 5  ·  Lasermania"
+par = 110
+limite_caida = 1616
+
+[node name="Fondo" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="Capa" type="Parallax2D" parent="Fondo"]
+follow_viewport = false
+scroll_scale = Vector2(0.25, 0.12)
+repeat_size = Vector2(640, 358)
+repeat_times = 4
+
+[node name="Placa" type="AnimatedSprite2D" parent="Fondo/Capa"]
+sprite_frames = ExtResource("14_fondo")
+animation = &"placa"
+autoplay = "placa"
+centered = false
+position = Vector2(0, -160)
+
+[node name="Geometria" type="StaticBody2D" parent="."]
+
+[node name="C00" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(800, 1464)
+shape = SubResource("s0")
+
+[node name="V00" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(0, 1440)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 4800, 144)
+
+[node name="C01" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(552, 1232)
+shape = SubResource("s1")
+
+[node name="V01" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(528, 1216)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C02" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(808, 1232)
+shape = SubResource("s1")
+
+[node name="V02" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(784, 1216)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C03" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(1064, 1232)
+shape = SubResource("s1")
+
+[node name="V03" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(1040, 1216)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C04" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(1320, 1232)
+shape = SubResource("s1")
+
+[node name="V04" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(1296, 1216)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C05" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(1824, 1456)
+shape = SubResource("s2")
+
+[node name="V05" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(1712, 1440)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 672, 96)
+
+[node name="C06" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(2128, 1392)
+shape = SubResource("s3")
+
+[node name="V06" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(2048, 1376)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C07" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(2400, 1328)
+shape = SubResource("s3")
+
+[node name="V07" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(2320, 1312)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C08" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(2672, 1264)
+shape = SubResource("s3")
+
+[node name="V08" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(2592, 1248)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C09" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(2944, 1200)
+shape = SubResource("s3")
+
+[node name="V09" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(2864, 1184)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C10" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(2264, 1120)
+shape = SubResource("s1")
+
+[node name="V10" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(2240, 1104)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C11" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(2808, 992)
+shape = SubResource("s1")
+
+[node name="V11" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(2784, 976)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C12" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(3728, 1136)
+shape = SubResource("s4")
+
+[node name="V12" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(3136, 1120)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 3552, 96)
+
+[node name="C13" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(3560, 912)
+shape = SubResource("s1")
+
+[node name="V13" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(3536, 896)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C14" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(3784, 912)
+shape = SubResource("s1")
+
+[node name="V14" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(3760, 896)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C15" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(4008, 912)
+shape = SubResource("s1")
+
+[node name="V15" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(3984, 896)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C16" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(4232, 912)
+shape = SubResource("s1")
+
+[node name="V16" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(4208, 896)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C17" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(4544, 1136)
+shape = SubResource("s2")
+
+[node name="V17" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(4432, 1120)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 672, 96)
+
+[node name="C18" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(4848, 1072)
+shape = SubResource("s3")
+
+[node name="V18" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(4768, 1056)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C19" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(5120, 1008)
+shape = SubResource("s3")
+
+[node name="V19" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(5040, 992)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C20" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(5392, 944)
+shape = SubResource("s3")
+
+[node name="V20" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(5312, 928)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C21" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(5664, 880)
+shape = SubResource("s3")
+
+[node name="V21" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(5584, 864)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C22" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(4984, 800)
+shape = SubResource("s1")
+
+[node name="V22" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(4960, 784)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C23" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(5256, 736)
+shape = SubResource("s1")
+
+[node name="V23" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(5232, 720)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C24" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(5968, 880)
+shape = SubResource("s2")
+
+[node name="V24" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(5856, 864)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 672, 96)
+
+[node name="C25" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(6320, 1024)
+shape = SubResource("s3")
+
+[node name="V25" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(6240, 1008)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C26" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(6640, 1168)
+shape = SubResource("s3")
+
+[node name="V26" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(6560, 1152)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C27" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(6960, 1312)
+shape = SubResource("s3")
+
+[node name="V27" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(6880, 1296)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C28" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(7280, 1456)
+shape = SubResource("s3")
+
+[node name="V28" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(7200, 1440)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 480, 96)
+
+[node name="C29" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(6808, 960)
+shape = SubResource("s1")
+
+[node name="V29" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(6784, 944)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C30" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(7128, 1104)
+shape = SubResource("s1")
+
+[node name="V30" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(7104, 1088)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C31" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(8096, 1464)
+shape = SubResource("s5")
+
+[node name="V31" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(7472, 1440)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 3744, 144)
+
+[node name="C32" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(7848, 1232)
+shape = SubResource("s1")
+
+[node name="V32" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(7824, 1216)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C33" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(8056, 1232)
+shape = SubResource("s1")
+
+[node name="V33" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(8032, 1216)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 96)
+
+[node name="C34" type="CollisionShape2D" parent="Geometria"]
+position = Vector2(8288, 1360)
+shape = SubResource("s6")
+
+[node name="V34" type="Sprite2D" parent="Geometria"]
+texture = ExtResource("4_bloque")
+centered = false
+position = Vector2(8192, 1344)
+scale = Vector2(0.3333, 0.3333)
+texture_repeat = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 96)
+
+[node name="Estela" type="Node2D" parent="." groups=["estela"]]
+script = ExtResource("2_estela")
+
+[node name="Aparicion" type="Marker2D" parent="."]
+position = Vector2(256, 1424)
+
+[node name="Anclaje" parent="." instance=ExtResource("6_anclaje")]
+position = Vector2(256, 1438)
+
+[node name="Baliza0" parent="." instance=ExtResource("16_baliza")]
+position = Vector2(1888, 1438)
+
+[node name="Baliza1" parent="." instance=ExtResource("16_baliza")]
+position = Vector2(3280, 1118)
+
+[node name="Baliza2" parent="." instance=ExtResource("16_baliza")]
+position = Vector2(4608, 1118)
+
+[node name="Baliza3" parent="." instance=ExtResource("16_baliza")]
+position = Vector2(6032, 862)
+
+[node name="Baliza4" parent="." instance=ExtResource("16_baliza")]
+position = Vector2(7648, 1438)
+
+[node name="Salida" parent="." instance=ExtResource("5_portal")]
+position = Vector2(8576, 1408)
+
+[node name="Interruptor" parent="." instance=ExtResource("12_inter")]
+position = Vector2(8272, 1328)
+
+[node name="Puerta" parent="." instance=ExtResource("13_puerta")]
+position = Vector2(8512, 1392)
+
+[node name="Fragmentos" type="Node2D" parent="."]
+
+[node name="F0" type="Area2D" parent="Fragmentos"]
+position = Vector2(928, 1344)
+
+[node name="Col" type="CollisionShape2D" parent="Fragmentos/F0"]
+shape = SubResource("sf")
+
+[node name="Vis" type="Polygon2D" parent="Fragmentos/F0"]
+color = Color(0.78, 0.95, 0.31, 1)
+polygon = PackedVector2Array(0, -11, 9, 0, 0, 11, -9, 0)
+
+[node name="F1" type="Area2D" parent="Fragmentos"]
+position = Vector2(3664, 1024)
+
+[node name="Col" type="CollisionShape2D" parent="Fragmentos/F1"]
+shape = SubResource("sf")
+
+[node name="Vis" type="Polygon2D" parent="Fragmentos/F1"]
+color = Color(0.78, 0.95, 0.31, 1)
+polygon = PackedVector2Array(0, -11, 9, 0, 0, 11, -9, 0)
+
+[node name="F2" type="Area2D" parent="Fragmentos"]
+position = Vector2(6320, 928)
+
+[node name="Col" type="CollisionShape2D" parent="Fragmentos/F2"]
+shape = SubResource("sf")
+
+[node name="Vis" type="Polygon2D" parent="Fragmentos/F2"]
+color = Color(0.78, 0.95, 0.31, 1)
+polygon = PackedVector2Array(0, -11, 9, 0, 0, 11, -9, 0)
+
+[node name="Peligros" type="Node2D" parent="."]
+
+[node name="Laser0" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(544, 1248)
+largo_celdas = 11
+reposo = 1.2
+carga = 0.5
+disparo = 0.8
+desfase = 0
+
+[node name="Laser1" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(800, 1248)
+largo_celdas = 11
+reposo = 1.2
+carga = 0.5
+disparo = 0.8
+desfase = 0.9
+
+[node name="Laser2" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(1056, 1248)
+largo_celdas = 11
+reposo = 1.2
+carga = 0.5
+disparo = 0.8
+desfase = 1.8
+
+[node name="Laser3" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(1312, 1248)
+largo_celdas = 11
+reposo = 1.2
+carga = 0.5
+disparo = 0.8
+desfase = 0.4
+
+[node name="Laser4" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(2256, 1136)
+largo_celdas = 17
+reposo = 1.6
+carga = 0.5
+disparo = 0.6
+desfase = 0.5
+
+[node name="Laser5" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(2800, 1008)
+largo_celdas = 17
+reposo = 1.6
+carga = 0.5
+disparo = 0.6
+desfase = 1.4
+
+[node name="Laser6" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(3552, 928)
+largo_celdas = 11
+reposo = 1
+carga = 0.5
+disparo = 0.8
+desfase = 0.3
+
+[node name="Laser7" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(3776, 928)
+largo_celdas = 11
+reposo = 1.4
+carga = 0.5
+disparo = 0.7
+desfase = 1.2
+
+[node name="Laser8" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(4000, 928)
+largo_celdas = 11
+reposo = 0.9
+carga = 0.5
+disparo = 0.9
+desfase = 2
+
+[node name="Laser9" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(4224, 928)
+largo_celdas = 11
+reposo = 1.3
+carga = 0.5
+disparo = 0.7
+desfase = 0.8
+
+[node name="Laser10" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(4976, 816)
+largo_celdas = 17
+reposo = 1.5
+carga = 0.5
+disparo = 0.7
+desfase = 0
+
+[node name="Laser11" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(5248, 752)
+largo_celdas = 17
+reposo = 1.5
+carga = 0.5
+disparo = 0.7
+desfase = 1.1
+
+[node name="Laser12" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(6800, 976)
+largo_celdas = 22
+reposo = 1.6
+carga = 0.5
+disparo = 0.6
+desfase = 0
+
+[node name="Laser13" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(7120, 1120)
+largo_celdas = 22
+reposo = 1.6
+carga = 0.5
+disparo = 0.6
+desfase = 1
+
+[node name="Laser14" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(7840, 1248)
+largo_celdas = 11
+reposo = 1.2
+carga = 0.5
+disparo = 0.8
+desfase = 0.6
+
+[node name="Laser15" parent="Peligros" instance=ExtResource("7_laser")]
+position = Vector2(8048, 1248)
+largo_celdas = 11
+reposo = 1.4
+carga = 0.5
+disparo = 0.7
+desfase = 1.5
+
+[node name="Jugador" parent="." instance=ExtResource("3_jugador")]
+
+[node name="HUD" type="CanvasLayer" parent="."]

@@ -1,0 +1,163 @@
+[gd_resource type="SpriteFrames" load_steps=24 format=3]
+
+[ext_resource type="Texture2D" path="res://arte/elementos/interruptor_apagado.png" id="1_apagado"]
+[ext_resource type="Texture2D" path="res://arte/elementos/interruptor_activar.png" id="2_activar"]
+[ext_resource type="Texture2D" path="res://arte/elementos/interruptor_activo.png" id="3_activo"]
+
+[sub_resource type="AtlasTexture" id="apagado_00"]
+atlas = ExtResource("1_apagado")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="apagado_01"]
+atlas = ExtResource("1_apagado")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="apagado_02"]
+atlas = ExtResource("1_apagado")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="apagado_03"]
+atlas = ExtResource("1_apagado")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="apagado_04"]
+atlas = ExtResource("1_apagado")
+region = Rect2(1152, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="apagado_05"]
+atlas = ExtResource("1_apagado")
+region = Rect2(1440, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activar_00"]
+atlas = ExtResource("2_activar")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activar_01"]
+atlas = ExtResource("2_activar")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activar_02"]
+atlas = ExtResource("2_activar")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activar_03"]
+atlas = ExtResource("2_activar")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activar_04"]
+atlas = ExtResource("2_activar")
+region = Rect2(1152, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activar_05"]
+atlas = ExtResource("2_activar")
+region = Rect2(1440, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activo_00"]
+atlas = ExtResource("3_activo")
+region = Rect2(0, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activo_01"]
+atlas = ExtResource("3_activo")
+region = Rect2(288, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activo_02"]
+atlas = ExtResource("3_activo")
+region = Rect2(576, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activo_03"]
+atlas = ExtResource("3_activo")
+region = Rect2(864, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activo_04"]
+atlas = ExtResource("3_activo")
+region = Rect2(1152, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activo_05"]
+atlas = ExtResource("3_activo")
+region = Rect2(1440, 0, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activo_06"]
+atlas = ExtResource("3_activo")
+region = Rect2(0, 288, 288, 288)
+
+[sub_resource type="AtlasTexture" id="activo_07"]
+atlas = ExtResource("3_activo")
+region = Rect2(288, 288, 288, 288)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("apagado_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("apagado_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("apagado_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("apagado_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("apagado_04")
+}, {
+"duration": 1.0,
+"texture": SubResource("apagado_05")
+}],
+"loop": true,
+"name": &"apagado",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("activar_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("activar_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("activar_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("activar_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("activar_04")
+}, {
+"duration": 1.0,
+"texture": SubResource("activar_05")
+}],
+"loop": false,
+"name": &"activar",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("activo_00")
+}, {
+"duration": 1.0,
+"texture": SubResource("activo_01")
+}, {
+"duration": 1.0,
+"texture": SubResource("activo_02")
+}, {
+"duration": 1.0,
+"texture": SubResource("activo_03")
+}, {
+"duration": 1.0,
+"texture": SubResource("activo_04")
+}, {
+"duration": 1.0,
+"texture": SubResource("activo_05")
+}, {
+"duration": 1.0,
+"texture": SubResource("activo_06")
+}, {
+"duration": 1.0,
+"texture": SubResource("activo_07")
+}],
+"loop": true,
+"name": &"activo",
+"speed": 10.0
+}]
